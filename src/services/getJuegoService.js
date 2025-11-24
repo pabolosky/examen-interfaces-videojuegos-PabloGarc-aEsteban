@@ -5,7 +5,10 @@ export function getJuego(id){
     let promesa = new Promise((resolve, reject) =>{
 
         setTimeout(()=>{
-            let juego = juegos.find( j => j.id === id) ?.titulo
+            let tit = juegos.find( j => j.id === id) ?.titulo
+            let plat = juegos.find( j => j.id === id) ?.plataforma
+
+            let juego = [tit, plat]
 
             if(juego){
                 resolve(juego)

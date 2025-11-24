@@ -22,8 +22,8 @@ function mostrarJuego(id){
             console.log(juego, "Juego")
             salida.innerHTML = "Juego encontrado!! "
             salida.innerHTML += "ID: " + id 
-            salida.innerHTML += `, Título: ${juego}` 
-         //   salida.innerHTML += `, Plataforma: ${juego.plataforma}`
+            salida.innerHTML += `, Título: ${juego[0]}` 
+            salida.innerHTML += `, Plataforma: ${juego[1]}`
         })
         .catch((error) => {
             console.log(error, "error")
