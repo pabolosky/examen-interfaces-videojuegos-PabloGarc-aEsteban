@@ -2,8 +2,6 @@ import { getJuego } from "./services/getJuegoService.js";
 
 let salida = document.getElementById("salida")
 
-let br = document.createElement("br")
-
 function getIdFromButton(){
     let input = prompt("Introduce el ID del juego (1-12):")
     let id = Number(input)
@@ -20,10 +18,8 @@ function mostrarJuego(id){
         getJuego(id)
         .then((juego) => {
             console.log(juego, "Juego")
-            salida.innerHTML = "Juego encontrado!! "
-            salida.innerHTML += "ID: " + id 
-            salida.innerHTML += `, Título: ${juego[0]}` 
-            salida.innerHTML += `, Plataforma: ${juego[1]}`
+            salida.textContent = `Juego Encontrado: Id - ${id}, Título - ${juego[0]}, Plataforma - ${juego[1]}`
+
         })
         .catch((error) => {
             console.log(error, "error")

@@ -10,7 +10,7 @@ export function getJuego(id){
 
             let juego = [tit, plat]
 
-            if(juego){
+            if(tit){
                 resolve(juego)
             }else{
                 reject(`Juego con id ${id} no existe`)
